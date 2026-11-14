@@ -1,9 +1,16 @@
 {
     "name": "omnitrix/omnitrix",
-    "description": "Application skeleton for the Omnitrix framework: asynchronous PHP APIs on OpenSwoole.",
+    "description": "The Omnitrix application template: asynchronous PHP APIs on OpenSwoole.",
     "type": "project",
     "license": "MIT",
-    "keywords": ["omnitrix", "framework", "api", "skeleton", "async", "openswoole"],
+    "keywords": [
+        "omnitrix",
+        "framework",
+        "api",
+        "template",
+        "async",
+        "openswoole"
+    ],
     "authors": [
         {
             "name": "Ajmal Alkhaledi",
@@ -16,7 +23,7 @@
         "ext-openswoole": ">=26.2.0",
         "ext-pdo_mysql": "*",
         "ext-redis": "*",
-        "omnitrix/framework": "^0.1"
+        "omnitrix/core": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.5"
@@ -28,7 +35,9 @@
         }
     },
     "autoload-dev": {
-        "psr-4": { "Tests\\": "tests/" }
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "config": {
         "sort-packages": true,

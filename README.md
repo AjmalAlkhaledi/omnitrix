@@ -1,8 +1,7 @@
-# Omnitrix Application
+# Omnitrix
 
-This is the starting point for an Omnitrix
-API: asynchronous PHP on OpenSwoole, with routing, models and migrations, background jobs and a
-command line.
+The application template for Omnitrix APIs: asynchronous PHP on OpenSwoole, with routing,
+models and migrations, background jobs and a command line.
 
 ## Requirements
 
@@ -43,6 +42,13 @@ database/          migrations and seeds
 tests/             PHPUnit tests
 ```
 
+## Documentation
+
+https://ajmalalkhaledi.github.io/omnitrix-docs/
+
+The framework itself is the `omnitrix/core` package, installed in `vendor/` and updated with
+`composer update omnitrix/core`.
+
 ## License
 
-The Omnitrix application skeleton is open-source software licensed under the [MIT license](LICENSE).
+The Omnitrix application template is open-source software licensed under the [MIT license](LICENSE).
