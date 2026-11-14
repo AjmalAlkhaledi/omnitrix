@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/*
+ * The project command line: `php omnitrix list` shows every command.
+ */
+
+use Omnitrix\Console\Console;
+
+require __DIR__ . '/vendor/autoload.php';
+
+exit((new Console(__DIR__))->run());

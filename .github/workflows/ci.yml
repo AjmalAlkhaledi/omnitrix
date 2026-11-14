@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main, '*.x']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          extensions: openswoole-26.2.0, redis, pdo_mysql, mbstring
+          tools: composer:v2
+          coverage: none
+
+      - run: composer validate --strict
+      - run: composer install --no-interaction --no-progress
+      - run: cp .env.example .env
+      - name: Tests
+        run: vendor/bin/omnitrix-phpunit
