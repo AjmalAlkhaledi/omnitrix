@@ -16,6 +16,10 @@ return [
     // Seconds a single statement may run (enforced by the server).
     'statement_timeout' => 30.0,
 
+    // Primary-key row cache in Redis (needs config/redis.php). Lookups by key are served from
+    // it; writes invalidate exactly the rows they change. List the tables to cache:
+    // 'cache' => ['tables' => ['users', 'products'], 'ttl' => 300],
+
     // Connections per worker process: total = workers × max.
     'pool' => [
         'min' => 1,
