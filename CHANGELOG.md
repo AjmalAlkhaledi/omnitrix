@@ -3,6 +3,12 @@
 All notable changes to the application template are documented in this file. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+### Changed
+
+- Requires `omnitrix/core` `^0.2` (row and query cache; see `config/database.php`).
+
 ## [0.1.0] - 2026-11-14
 
 ### Added
