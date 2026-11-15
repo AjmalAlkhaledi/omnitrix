@@ -19,6 +19,8 @@ return [
     // Primary-key row cache in Redis (needs config/redis.php). Lookups by key are served from
     // it; writes invalidate exactly the rows they change. List the tables to cache:
     // 'cache' => ['tables' => ['users', 'products'], 'ttl' => 300],
+    // Cached queries (->cache(60)) may filter on these columns:
+    // 'cache' => ['tables' => ['users'], 'queries' => ['posts' => ['user_id', 'status']]],
 
     // Connections per worker process: total = workers × max.
     'pool' => [
