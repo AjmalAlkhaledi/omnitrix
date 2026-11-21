@@ -39,10 +39,12 @@ jobs:
 
       - name: Use the core development branch (unreleased x.* work)
         if: startsWith(github.head_ref || github.ref_name, 'x.')
+        env:
+          BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
           # The x.* template targets an unreleased core version; test it against core's branch.
           composer config repositories.core vcs https://github.com/AjmalAlkhaledi/omnitrix-core
-          composer require --no-update "omnitrix/core:dev-$(echo '${{ github.head_ref || github.ref_name }}') as 0.2.0"
+          composer require --no-update "omnitrix/core:dev-${BRANCH} as 0.2.0"
 
       - run: composer install --no-interaction --no-progress
       - run: cp .env.example .env
