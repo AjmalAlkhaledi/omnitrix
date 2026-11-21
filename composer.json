@@ -52,6 +52,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
+            "@php omnitrix key:generate --ansi",
             "@php -r \"echo PHP_EOL, 'Omnitrix application ready.', PHP_EOL, 'Configure .env, then run: php omnitrix migrate && php omnitrix serve', PHP_EOL;\""
         ],
         "serve": "@php omnitrix serve",

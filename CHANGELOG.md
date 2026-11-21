@@ -5,6 +5,11 @@ All notable changes to the application template are documented in this file. The
 
 ## [Unreleased]
 
+### Changed
+
+- `composer create-project` generates `APP_KEY` (`php omnitrix key:generate`).
+- PHPUnit 13 on PHP 8.4 and later (12 on PHP 8.3).
+
 ## [0.3.0] - 2026-11-21
 
 ### Added
