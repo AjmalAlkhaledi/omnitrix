@@ -33,8 +33,9 @@ final class UserController
         $data = $request->validate([
             'name' => 'required|string|max:100',
             'email' => 'required|email|max:255',
+            'password' => 'required|string|min:8|max:200',
         ]);
-        $user = User::create($data);
+        $user = User::create($data); // the password is hashed by the 'hashed' cast
         Queue::dispatch('users.welcome', ['user_id' => $user->id]);
 
         return Response::json($user, 201);
