@@ -13,6 +13,9 @@ return [
     // Exception details in 500 responses. Never enable in production.
     'debug' => Env::bool('APP_DEBUG', false),
 
+    // Public base URL, for absolute links (URL::route(), signed URLs in e-mails).
+    'url' => Env::get('APP_URL', 'http://127.0.0.1:8080') ?? 'http://127.0.0.1:8080',
+
     // 32-byte key for encryption, encrypted cookies, sessions and signed URLs (`php omnitrix key:generate`).
     'key' => Env::get('APP_KEY'),
     // Keys used before the current one: they still decrypt older data after a key rotation.
