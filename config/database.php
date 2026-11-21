@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Omnitrix\Config\Env;
 
 return [
-    'driver' => Env::get('DB_DRIVER', 'mariadb') ?? 'mariadb',   // mariadb or mysql
+    'driver' => Env::get('DB_DRIVER', 'mariadb') ?? 'mariadb',   // mariadb, mysql or pgsql (PostgreSQL: port 5432, user postgres)
     'host' => Env::get('DB_HOST', '127.0.0.1') ?? '127.0.0.1',
     'port' => Env::int('DB_PORT', 3306),
     'database' => Env::get('DB_DATABASE', 'omnitrix') ?? 'omnitrix',
