@@ -5,9 +5,12 @@ All notable changes to the application template are documented in this file. The
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-21
+
 ### Changed
 
 - Requires `omnitrix/core` `^0.2` (row and query cache; see `config/database.php`).
+- CI builds OpenSwoole 26.2 from source.
 
 ## [0.1.0] - 2026-11-14
 
