@@ -13,6 +13,12 @@ return [
     'providers' => [
         'users' => ['model' => App\Models\User::class],
     ],
+    // Password reset links: {token} and {email} are filled in (point it at your frontend).
+    'passwords' => [
+        'url' => (Omnitrix\Config\Env::get('APP_URL', 'http://127.0.0.1:8080') ?? '') . '/reset-password?token={token}&email={email}',
+        'expire' => 60,   // minutes
+        'throttle' => 60, // seconds between links for one address
+    ],
     // Model policies: App\Models\Post::class => App\Policies\PostPolicy::class
     'policies' => [],
 ];

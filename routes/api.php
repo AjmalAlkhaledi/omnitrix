@@ -8,10 +8,15 @@ declare(strict_types=1);
  */
 
 use App\Controllers\UserController;
+use Omnitrix\Auth\AuthRoutes;
 use Omnitrix\Routing\Router;
 
 /** @var Router $router */
 $router->get('/', static fn(): array => ['name' => 'Omnitrix', 'status' => 'ok']);
+
+// E-mail verification and password reset endpoints (JSON).
+AuthRoutes::verification($router);
+AuthRoutes::passwordReset($router);
 
 $router->group('/api', static function (Router $router): void {
     $router->get('/users', [UserController::class, 'index'])->name('users.index');

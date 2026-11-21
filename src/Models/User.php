@@ -8,7 +8,9 @@ use DateTimeImmutable;
 use Omnitrix\Auth\Access\Authorizable;
 use Omnitrix\Auth\Authenticatable;
 use Omnitrix\Auth\HasApiTokens;
+use Omnitrix\Auth\Verification\MustVerifyEmail;
 use Omnitrix\Contracts\Authenticatable as AuthenticatableContract;
+use Omnitrix\Contracts\MustVerifyEmail as MustVerifyEmailContract;
 use Omnitrix\Database\Collection;
 use Omnitrix\Database\Model;
 use Omnitrix\Database\Relations\HasMany;
@@ -24,11 +26,12 @@ use Omnitrix\Notifications\Notifiable;
  * @property DateTimeImmutable|null $updated_at
  * @property-read Collection<Post>  $posts
  */
-final class User extends Model implements AuthenticatableContract
+final class User extends Model implements AuthenticatableContract, MustVerifyEmailContract
 {
     use Authenticatable;
     use Authorizable;
     use HasApiTokens;
+    use MustVerifyEmail;
     use Notifiable;
 
     /** @var list<string> */
