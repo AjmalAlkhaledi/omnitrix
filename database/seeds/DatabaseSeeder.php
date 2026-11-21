@@ -12,7 +12,8 @@ final class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $user = User::create(['name' => 'Demo User', 'email' => 'demo@example.com']);
+        $user = User::create(['name' => 'Demo User', 'email' => 'demo@example.com', 'password' => 'password']);
         $user->posts()->create(['title' => 'Hello, Omnitrix', 'body' => 'Your first post.', 'published' => true]);
+        User::factory()->count(5)->create();
     }
 }

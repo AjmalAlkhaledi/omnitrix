@@ -12,6 +12,7 @@ use Omnitrix\Auth\Verification\MustVerifyEmail;
 use Omnitrix\Contracts\Authenticatable as AuthenticatableContract;
 use Omnitrix\Contracts\MustVerifyEmail as MustVerifyEmailContract;
 use Omnitrix\Database\Collection;
+use Omnitrix\Database\Factories\HasFactory;
 use Omnitrix\Database\Model;
 use Omnitrix\Database\Relations\HasMany;
 use Omnitrix\Notifications\Notifiable;
@@ -31,6 +32,7 @@ final class User extends Model implements AuthenticatableContract, MustVerifyEma
     use Authenticatable;
     use Authorizable;
     use HasApiTokens;
+    use HasFactory;
     use MustVerifyEmail;
     use Notifiable;
 
