@@ -12,6 +12,7 @@ use Omnitrix\Contracts\Authenticatable as AuthenticatableContract;
 use Omnitrix\Database\Collection;
 use Omnitrix\Database\Model;
 use Omnitrix\Database\Relations\HasMany;
+use Omnitrix\Notifications\Notifiable;
 
 /**
  * @property int                    $id
@@ -28,6 +29,7 @@ final class User extends Model implements AuthenticatableContract
     use Authenticatable;
     use Authorizable;
     use HasApiTokens;
+    use Notifiable;
 
     /** @var list<string> */
     protected static array $fillable = ['name', 'email', 'password'];
