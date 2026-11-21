@@ -13,4 +13,6 @@ return [
     'providers' => [
         'users' => ['model' => App\Models\User::class],
     ],
+    // Model policies: App\Models\Post::class => App\Policies\PostPolicy::class
+    'policies' => [],
 ];

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use DateTimeImmutable;
+use Omnitrix\Auth\Access\Authorizable;
 use Omnitrix\Auth\Authenticatable;
 use Omnitrix\Auth\HasApiTokens;
 use Omnitrix\Contracts\Authenticatable as AuthenticatableContract;
@@ -25,6 +26,7 @@ use Omnitrix\Database\Relations\HasMany;
 final class User extends Model implements AuthenticatableContract
 {
     use Authenticatable;
+    use Authorizable;
     use HasApiTokens;
 
     /** @var list<string> */
