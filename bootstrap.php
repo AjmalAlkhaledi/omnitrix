@@ -24,4 +24,9 @@ $app->health('/health');
 
 $app->routes(__DIR__ . '/routes/api.php');
 
+// Scheduled tasks: run `php omnitrix schedule:work`, or `schedule:run` every minute from cron.
+// $app->schedule(static function (Omnitrix\Scheduling\Schedule $schedule): void {
+//     $schedule->job('reports.build')->dailyAt('02:00')->onOneServer();
+// });
+
 return $app;
