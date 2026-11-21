@@ -23,4 +23,12 @@ return [
 
     // Minimum level written to the log: debug, info, notice, warning, error, critical, alert, emergency.
     'log_level' => Env::get('LOG_LEVEL', 'info') ?? 'info',
+
+    // `php omnitrix down` / `up`. The file driver takes this server down; with several servers use
+    // 'redis' so one command covers all of them. `except`: paths still served (fnmatch patterns).
+    'maintenance' => [
+        'driver' => Env::get('MAINTENANCE_DRIVER', 'file') ?? 'file',
+        'path' => __DIR__ . '/../storage/framework/down',
+        'except' => ['/health/*', '/metrics'],
+    ],
 ];

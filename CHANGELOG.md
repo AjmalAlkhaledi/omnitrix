@@ -9,6 +9,7 @@ All notable changes to the application template are documented in this file. The
 
 - `config/filesystems.php` (local, public and S3 disks), `storage/app/{private,public}`, and
   `StorageRoutes` in `routes/api.php`.
+- `app.maintenance` for `php omnitrix down` / `up`.
 
 ### Changed
 

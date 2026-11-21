@@ -4,6 +4,7 @@
 !/.env.example
 /storage/logs/*
 !/storage/logs/.gitignore
+/storage/framework/
 /.phpunit.cache/
 /.phpunit.result.cache
 /phpunit.xml
