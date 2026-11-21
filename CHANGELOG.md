@@ -5,6 +5,22 @@ All notable changes to the application template are documented in this file. The
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-21
+
+### Added
+
+- Users with hashed passwords, API tokens, e-mail verification and password reset
+  (`AuthRoutes`), policies, notifications and a `UserFactory`; migrations for passwords,
+  personal access tokens, notifications and password reset tokens.
+- Configuration for hashing, encryption keys (`APP_KEY`, `key:generate`), `APP_URL`, events, rate
+  limiting, sessions, mail, authentication and broadcasting; commented examples for Redis Cluster,
+  PostgreSQL and scheduled tasks.
+
+### Changed
+
+- Requires `omnitrix/core` `^0.3`.
+- `POST /api/users` requires a password (at least 8 characters).
+
 ## [0.2.0] - 2026-11-21
 
 ### Changed
