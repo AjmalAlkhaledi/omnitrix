@@ -5,6 +5,11 @@ All notable changes to the application template are documented in this file. The
 
 ## [Unreleased]
 
+### Added
+
+- `config/filesystems.php` (local, public and S3 disks), `storage/app/{private,public}`, and
+  `StorageRoutes` in `routes/api.php`.
+
 ### Changed
 
 - `composer create-project` generates `APP_KEY` (`php omnitrix key:generate`).

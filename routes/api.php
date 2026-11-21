@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 use App\Controllers\UserController;
 use Omnitrix\Auth\AuthRoutes;
+use Omnitrix\Filesystem\StorageRoutes;
 use Omnitrix\Routing\Router;
 
 /** @var Router $router */
@@ -17,6 +18,9 @@ $router->get('/', static fn(): array => ['name' => 'Omnitrix', 'status' => 'ok']
 // E-mail verification and password reset endpoints (JSON).
 AuthRoutes::verification($router);
 AuthRoutes::passwordReset($router);
+
+// Files of the public disk at /storage/..., and Storage::temporaryUrl() links for private files.
+StorageRoutes::register($router);
 
 $router->group('/api', static function (Router $router): void {
     $router->get('/users', [UserController::class, 'index'])->name('users.index');
