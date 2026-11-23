@@ -5,6 +5,8 @@ All notable changes to the application template are documented in this file. The
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-23
+
 ### Added
 
 - `config/filesystems.php` (local, public and S3 disks), `storage/app/{private,public}`, and
@@ -14,6 +16,7 @@ All notable changes to the application template are documented in this file. The
 ### Changed
 
 - `composer create-project` generates `APP_KEY` (`php omnitrix key:generate`).
+- Requires `omnitrix/core` `^0.4`.
 - PHPUnit 13 on PHP 8.4 and later (12 on PHP 8.3).
 
 ## [0.3.0] - 2026-11-21

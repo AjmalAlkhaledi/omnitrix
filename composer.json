@@ -23,7 +23,7 @@
         "ext-openswoole": ">=26.2.0",
         "ext-pdo_mysql": "*",
         "ext-redis": "*",
-        "omnitrix/core": "^0.3"
+        "omnitrix/core": "^0.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.5 || ^13.4"
